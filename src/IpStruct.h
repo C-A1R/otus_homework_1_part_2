@@ -9,10 +9,10 @@ class IpStruct
     std::vector<int> bytes;
 
 public:
-    static const size_t ipVersion {4};
+    static const int ipVersion {4};
 
     explicit IpStruct(const std::vector<std::string> &v);
-    int getByte(const size_t index) const;
+    int getByte(const int index) const;
     void print() const;
     bool isValid() const;
 };

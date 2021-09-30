@@ -80,6 +80,10 @@ int main()
             {
                 int f_byte = first.getByte(index);
                 int s_byte = second.getByte(index);
+                if (f_byte == -1 || s_byte == -1)
+                {
+                    return false;
+                }
                 if (f_byte == s_byte)
                 {
                     continue;

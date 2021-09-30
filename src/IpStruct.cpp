@@ -22,13 +22,13 @@ IpStruct::IpStruct(const std::vector<std::string> &v)
     }
 }
 
-int IpStruct::getByte(const size_t index) const
+int IpStruct::getByte(const int index) const
 {
     if (index > 0 && index <= ipVersion)
     {
         return bytes[index];
     }
-    throw -1;
+    return -1;
 }
 
 void IpStruct::print() const
