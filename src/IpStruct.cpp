@@ -24,6 +24,10 @@ IpStruct::IpStruct(const std::vector<std::string> &v)
 
 int IpStruct::getByte(const int index) const
 {
+    if (!isValid())
+    {
+        return -1;
+    }
     if (index >= 0 && index < ipVersion)
     {
         return bytes[index];
