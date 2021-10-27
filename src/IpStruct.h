@@ -15,6 +15,15 @@ public:
     int getByte(const int index) const;
     void print() const;
     bool isValid() const;
+
+    friend bool operator < (const IpStruct &left, const IpStruct &right)
+    {
+        return left.bytes < right.bytes;
+    }
+    friend bool operator > (const IpStruct &left, const IpStruct &right)
+    {
+        return !(left.bytes < right.bytes);
+    }
 };
 
 #endif //IPSTRUCT_H
